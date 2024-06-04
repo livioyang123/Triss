@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 mat-dialog-title>Cronologia partite:
+        <!-- <ng-select [items]="giocatori"
+           bindLabel="nome"
+           bindValue="id"
+           placeholder="Select a player"
+           (change)="selectPlayer($event)">
+        </ng-select> -->
+    </h2>
+        <mat-dialog-content class="mat-typography">
+            <div *ngFor="let item of partita_array">
+                <h3>{{ item.giocatore1.nome }} VS {{ item.giocatore2.nome }}</h3>
+                <p >{{getResult(item.vincitore,item.giocatore1,item.giocatore2)}} </p>
+                <!-- <p>{{render(item)}}</p> -->
+            </div>
+        </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+    </mat-dialog-actions>
+</div>
