@@ -109,7 +109,11 @@ export class TrisComponent {
     this.punteggio_p1 = 0
     this.punteggio_p2 = 0 
 
+    this.player1 = ""
+    this.player2 = ""
     this.msg_login = ""
+
+    this.players = []
   }
   reset() {
     this.array = [
@@ -145,8 +149,8 @@ export class TrisComponent {
         this.tutorialsService.start(this.player1,this.player2).subscribe(response=>{
           this.partita = response
         });
-        this.players.push(this.player1)
-        this.players.push(this.player2)
+        this.players.push(p1)
+        this.players.push(p2)
       }
       
     }else //campo nome vuoti
