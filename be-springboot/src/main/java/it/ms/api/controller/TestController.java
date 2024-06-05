@@ -101,7 +101,7 @@ public class TestController {
 
         // Controllo vittoria
         if (isEnd_win(mossa.getSegno())) {
-            response.setMsg("vincitore: " + mossa.getNomeGiocatore());
+            response.setMsg("vincitore: " + mossa.getNomeGiocatore()+";");
 
             partita.setVincitore(getWinner(mossa,partita.getGiocatore1(),partita.getGiocatore2()));
             partitaRepo.save(partita);
