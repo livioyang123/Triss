@@ -105,6 +105,11 @@ export class TrisComponent {
     this.response = ""
 
     this.vincitori = []
+
+    this.punteggio_p1 = 0
+    this.punteggio_p2 = 0 
+
+    this.msg_login = ""
   }
   reset() {
     this.array = [
@@ -117,6 +122,7 @@ export class TrisComponent {
     this.btn_reset = false;
 
     this.response = ""
+
   }
 
   disableAllButtons() {

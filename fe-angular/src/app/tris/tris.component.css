@@ -29,6 +29,9 @@ div div button {
   height: 50px;
   width: 100px;
 }
+.cell{
+  border:1px solid black
+}
 
 /* login --- */
 /* Stile per il contenitore della login */
