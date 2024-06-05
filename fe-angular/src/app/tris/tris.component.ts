@@ -59,9 +59,9 @@ export class TrisComponent {
 
   }
   click(posX: number, posY: number) {
-    if (this.isDisabled(posX, posY)) {
-      return;
-    }
+    // if (this.isDisabled(posX, posY)) {
+    //   return;
+    // }
 
     this.tutorialsService.sendPos(this.return_body(posX, posY, this.segno[this.segnoValue], this.players[this.segnoValue],this.partita)).subscribe((data: any) => {
       this.response = data.msg;
