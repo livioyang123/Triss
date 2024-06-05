@@ -2,7 +2,7 @@ mat-dialog-content div:focus, mat-dialog-content div:hover {
     border: 1px solid rgb(18, 131, 211); /* Specifica il colore e lo stile del bordo */
     border-radius: 5px; /* Arrotonda gli angoli del bordo */
   }
-.container,div,p,h3,h2 mat-dialog-title{
+.container,div,p,h3,div h2{
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
