@@ -70,7 +70,10 @@ export class TrisComponent {
         if (data.msg.includes('vincitore') || data.msg.includes('pareggio')) {
           this.btn_reset = true;
           this.disableAllButtons();
-          if(data.msg.includes('vincitore')) this.vincitori.push(this.response)
+          if(data.msg.includes('vincitore')) 
+            this.vincitori.push(this.response)
+          console.log(this.response)
+
           this.get_esito_partita()
         }
         
@@ -98,6 +101,10 @@ export class TrisComponent {
     this.btn_reset = false;
 
     this.login_success = false;
+
+    this.response = ""
+
+    this.vincitori = []
   }
   reset() {
     this.array = [
@@ -109,7 +116,7 @@ export class TrisComponent {
 
     this.btn_reset = false;
 
-
+    this.response = ""
   }
 
   disableAllButtons() {
@@ -154,9 +161,7 @@ export class TrisComponent {
     this.punteggio_p1 = 0
     this.punteggio_p2 = 0
 
-    this.vincitori.forEach((item)=>item.includes(this.player1) ? this.punteggio_p1++ : this.punteggio_p2++
-    
-  )
+    this.vincitori.forEach((item)=>item===("vincitore: "+this.player1+";") ? this.punteggio_p1++ :  item===("vincitore: "+this.player2+";") ? this.punteggio_p2++ : "")
   }
 
 
